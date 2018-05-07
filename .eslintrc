@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "no-var": "error",
+    "quotes": ["error", "single"],
+    "prefer-const": "error",
+    "no-trailing-spaces": "error",
+    "max-len": ["error", { "code": 80 }],
+    "arrow-body-style": ["error", "always"],
+    "comma-style": ["error", "last"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-const-assign": 2,
+    "no-multi-spaces": 2,
+    "eqeqeq": 2,
+    "no-unreachable": 2,
+    "indent": ["error", 2],
+    "no-console": 2,
+    "linebreak-style":"off",
+    "jsx-a11y/click-events-have-key-events":"off",
+    "arrow-parens":"off",
+    "function-paren-newline":"off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    "jsx-a11y/img-redundant-alt": [ 1, {
+      "components": [ "Image" ]
+    }],
+    "react/no-unused-prop-types": "off",
+    "import/prefer-default-export": "off",
+    "no-useless-escape": ["off"],
+    "react/jsx-sort-props": [1, {
+        "callbacksLast": false,
+        "ignoreCase": true,
+        "shorthandFirst": false
+    }],
+    "react/sort-prop-types": [1, {
+        "callbacksLast": true,
+        "ignoreCase": true,
+        "requiredFirst": false
+    }],
+    "semi": [2, "never"],
+    "sort-keys": ["warn", "asc", {"caseSensitive": true, "natural": false}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
