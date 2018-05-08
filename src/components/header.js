@@ -8,11 +8,11 @@ const Header = () => {
         <input id="menu-toggle" type="checkbox" />
         <label className="label-toggle" htmlFor="menu-toggle" />
         <ul className="twitter" role="navigation">
-          <li >e-Planner</li>
-          <li>e-GuestList app</li>
-          <li>e-Map</li>
-          <li>Συχνές ερωτήσεις</li>
-          <li>Επικοινωνία</li>
+          <li >Menu 1</li>
+          <li>Menu 2</li>
+          <li>Menu 3</li>
+          <li>Menu 4</li>
+          <li>Menu 5</li>
         </ul>
       </nav>
     </header>

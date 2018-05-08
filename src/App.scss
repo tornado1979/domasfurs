@@ -3,8 +3,10 @@
 
 //Color Variables
 $color1: #e5097f;
-$color2: #53354A;
-$color3: #903749;
+$color2: #53354A; // Open menu
+$color3: #903749; // Open menu
+$color4: #000; // Menus border-bottom
+$color5: #fff; // Menu white
 
 body {
   font-family: Arial, Tahoma;
@@ -67,19 +69,56 @@ ul {
   display: none;
 }
 
-#menu-toggle:checked ~ .twitter {
-  opacity: 1;
-  display: flex;
+#menu-toggle:checked~ .twitter {
+    opacity: 1;
+    display: flex;
 }
 
+#menu-toggle:checked~ {
+  & .label-toggle {
+    position: relative;
+    top: 53px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+  }
 
-.label-toggle {
-  display: none;
+  & .label-toggle:before, .label-toggle:after {
+    display:inline-block;
+    position: absolute;
+    left: 15px;
+    content:' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+
+  & .label-toggle:before {
+    top: -55px;
+    transform: rotate(45deg);
+  }
+  
+  & .label-toggle:after {
+    top: 1px;
+    transform: rotate(-45deg);
+  }
 }
 
+// Hide menu 'X' button
+@media (min-width: 1008px) {
+  .label-toggle:before, .label-toggle:after {
+    display: none !important;
+  }
+}
+
+// Medium screens, show menu button
 @media (max-width: 1007px) {
   .navBar {
     flex-flow: row wrap;
+  }
+
+  .label-toggle {
+    cursor: pointer;
   }
 
   .twitter {
@@ -87,11 +126,21 @@ ul {
     flex-flow: column;
     flex: 1 100%;
     justify-content: flex-start;
+    background-color: $color3;
+    height: 100vh;
+    & li {
+      border-bottom: 1px solid $color4;
+      color: $color5;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
   }
 
-  .label-toggle {
-    background: linear-gradient(to bottom, $color1 0%, $color1 20%, transparent 20%, transparent 40%, $color1 40%, $color1 60%, transparent 60%, transparent 80%, $color1 80%, $color1 100%); //Gradient Hamburger
-    cursor: pointer;
+  .label-toggle:before {
+    background: linear-gradient(to bottom, $color3 0%, $color3 20%, transparent 20%, transparent 40%, $color3 40%, $color3 60%, transparent 60%, transparent 80%, $color3 80%, $color3 100%); //Gradient Hamburger
+    content: ' ';
     display: block;
     float: right;
     height: 35px;
