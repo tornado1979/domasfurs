@@ -42,6 +42,7 @@ header {
 
 .twitter {
   display: flex;
+  flex-flow: row;
   justify-content: flex-end;
   align-items: center;
 }
@@ -66,12 +67,9 @@ ul {
   display: none;
 }
 
-#menu-toggle:checked ~ ul {
+#menu-toggle:checked ~ .twitter {
   opacity: 1;
   display: flex;
-  flex-flow: column;
-  flex: 1 100%;
-  justify-content: flex-start;
 }
 
 
@@ -86,6 +84,9 @@ ul {
 
   .twitter {
     display: none;
+    flex-flow: column;
+    flex: 1 100%;
+    justify-content: flex-start;
   }
 
   .label-toggle {
