@@ -7,6 +7,7 @@ $color2: #ececec; // Open menu background
 $color3: #959E05; // Open menu button
 $color4: #000; // Menus border-bottom
 $color5: #000; // font color white
+$color6: #fff; //  header bg
 
 body {
   font-family: Arial, Tahoma;
@@ -29,12 +30,13 @@ body {
   flex: 1 100%;
   display: flex;
   justify-content: space-between;
-  height: 150px;
+  height: 110px;
   max-width:80%;
   flex-flow: row nowrap;
 }
 
 header {
+  background-color: $color6;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -158,8 +160,13 @@ header {
     background-image: url('./assets/img/logo-sm.jpg');
     background-repeat: no-repeat;
     width: 110px;
-    height: 150px;
+    height: 110px;
     background-position: left;
   }
 
+}
+
+// images always width: 100%, inside their conteiner
+img {
+  width: 100%;
 }
