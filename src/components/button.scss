@@ -1,0 +1,29 @@
+$primary: #99ba30;
+$secondary: grey;
+$transparent: transparent;
+
+%button {
+  min-width: 100px;
+  padding: 1em;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%enable {
+  background-color: $primary;
+}
+
+%disable {
+  background-color: $secondary;
+}
+
+.btn {
+  &--image {
+    @extend %button;
+    @extend %enable;
+  }
+}
