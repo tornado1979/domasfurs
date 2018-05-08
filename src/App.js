@@ -5,6 +5,7 @@ import React, {
 import logo from './logo.svg'
 import './App.scss'
 import Header from './components/header'
+import Main from './components/main'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Main />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
