@@ -2,11 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 
 //Color Variables
-$color1: #e5097f;
-$color2: #53354A; // Open menu
-$color3: #903749; // Open menu
+$color1: #959E05; // Menu hover underline
+$color2: #ececec; // Open menu background
+$color3: #959E05; // Open menu button
 $color4: #000; // Menus border-bottom
-$color5: #fff; // Menu white
+$color5: #000; // font color white
 
 body {
   font-family: Arial, Tahoma;
@@ -42,18 +42,22 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.twitter {
+.menu {
   display: flex;
   flex-flow: row;
   justify-content: flex-end;
   align-items: center;
-}
-
-ul {
   padding: 0;
   list-style: none;
+
   & li {
+    cursor: pointer;
     padding: 10px;
+    border-bottom: 2px solid transparent;
+  }
+
+  & li:hover {
+    border-bottom: 2px solid $color1;
   }
 }
 
@@ -69,7 +73,7 @@ ul {
   display: none;
 }
 
-#menu-toggle:checked~ .twitter {
+#menu-toggle:checked~ .menu {
     opacity: 1;
     display: flex;
 }
@@ -121,12 +125,12 @@ ul {
     cursor: pointer;
   }
 
-  .twitter {
+  .menu {
     display: none;
     flex-flow: column;
     flex: 1 100%;
     justify-content: flex-start;
-    background-color: $color3;
+    background-color: $color2;
     height: 100vh;
     & li {
       border-bottom: 1px solid $color4;

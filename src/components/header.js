@@ -7,7 +7,7 @@ const Header = () => {
         <div className="logo"></div>
         <input id="menu-toggle" type="checkbox" />
         <label className="label-toggle" htmlFor="menu-toggle" />
-        <ul className="twitter" role="navigation">
+        <ul className="menu" role="navigation">
           <li >Menu 1</li>
           <li>Menu 2</li>
           <li>Menu 3</li>
