@@ -5,6 +5,7 @@
     "jsx-a11y"
   ],
   "rules": {
+    "eol-last": ["error", "always"],
     "no-var": "error",
     "quotes": ["error", "single"],
     "prefer-const": "error",
