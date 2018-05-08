@@ -1,3 +1,11 @@
 .container {
   flex: 1 100%;
 }
+
+.panel {
+  &--wrapper {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+  }
+}

@@ -1,5 +1,6 @@
 $primary: #fff; //fonts color
 $large: 28px; // fonts size
+$small: 16px; // fonts size
 
 %message {
   text-align: center;
@@ -7,11 +8,31 @@ $large: 28px; // fonts size
   position: absolute;
   top: 54%;
   left: 50%;
+  width: 90%;
   transform: translate(-50%, -50%);
 }
 
-.message--image {
-  @extend %message;
-  color: $primary;
-  font-size: $large;
+%text-2-lines{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.message {
+  &--image {
+    @extend %message;
+    @extend %text-2-lines;
+    color: $primary;
+    font-size: $large;
+  }
+}
+
+// on small screens i make fonts smaller
+@media (max-width: 500px){
+  .message {
+    &--image {
+      font-size: $small;
+    }
+  }  
 }
