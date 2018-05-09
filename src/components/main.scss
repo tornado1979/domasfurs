@@ -1,3 +1,5 @@
+$horizontal-color: #99ce58; // horizontalBlock bg
+
 main {
   margin-top: 90px;
   display: flex;
@@ -11,4 +13,9 @@ main {
   justify-content: space-between;
   flex-flow: row wrap;
   width: 100%;
+}
+
+.horizontalBlock {
+  width: 100%;
+  background-color: $horizontal-color;
 }

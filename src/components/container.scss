@@ -7,5 +7,21 @@
     flex-direction: column;
     display: flex;
     position: relative;
+
+    &--sized {
+      height: 200px;
+      position: relative;
+
+      &.with-bg {
+        background-image: url('../assets/img/bg-750x360.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+
+      &.without-bg {
+        background-color: gold;
+      }
+    }
   }
 }

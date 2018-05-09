@@ -118,14 +118,14 @@ header {
 }
 
 // Hide menu 'X' button
-@media (min-width: 780px) {
+@media screen and (min-width: 780px) {
   .label-toggle:before, .label-toggle:after {
     display: none !important;
   }
 }
 
 // Medium screens, show menu button
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .navBar {
     flex-flow: row wrap;
   }

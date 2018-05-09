@@ -54,13 +54,39 @@ class Main extends Component {
       <main>
         {/*main Image block*/}
         <Container
+          hasButton={true} // container has button
+          hasImg={true} // cotainer has <img>
+          hasMessage={true} // container has message
+          hasSubTitle={false} // constiner has sub-title
+          imgWidth='responsive' // image on container is responsive or fixed
+          isSized={false} // true on 'horizontalBlock'
+          link="" // button link 
+          source={img1} // image source
+          text='Add a message that you want to accompany the image'
+          textType='title' // text type is 'title' or 'comment'
           type="image"
-          source={img1}
-          message=""
-          link="" />
+        />
         {/*clients blocks*/}
         <div className="clientsBlock">
           {clients}
+        </div>
+        {/*small horizontal block*/}
+        <div className="horizontalBlock">
+          <Container
+            hasBackground={true} // background is image or color
+            hasButton={false}
+            hasImg={false}
+            hasMessage={true}
+            hasSubTitle={true}
+            imgWidth='responsive'
+            isSized={true} // custom size of the block
+            link=""
+            source={img1}
+            subTitle="There is no one who loves pain itself."
+            text='Neque porro quisquam est qui dolorem ipsum quia dolor
+            sit amet, consectetur, adipisci velit...'
+            textType='comment'
+            type="image" />
         </div>
       </main>
     )

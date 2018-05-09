@@ -2,9 +2,9 @@ $primary: #fff; //fonts color
 $large: 28px; // fonts size
 $small: 16px; // fonts size
 
+
 %message {
   text-align: center;
-  text-shadow: 0 0 15px;
   position: absolute;
   top: 54%;
   left: 50%;
@@ -23,8 +23,16 @@ $small: 16px; // fonts size
   &--image {
     @extend %message;
     @extend %text-2-lines;
+    text-shadow: 0 0 15px;
     color: $primary;
     font-size: $large;
+  }
+  &--comments {
+    @extend %message;
+    @extend %text-2-lines;
+    color: $primary;
+    font-size: $small;
+    font-style: italic;
   }
 }
 
