@@ -6,8 +6,9 @@ $color1: #959E05; // Menu hover underline
 $color2: #ececec; // Open menu background
 $color3: #959E05; // Open menu button
 $color4: #000; // Menus border-bottom
-$color5: #000; // font color white
+$color5: #000; // font color black
 $color6: #fff; //  header bg
+$color7: #707070; // menu fonts color
 
 * {
   box-sizing: border-box;
@@ -51,27 +52,24 @@ header {
 }
 
 .menu {
-  flex: 1 45%;
-  display: flex;
-  flex-flow: row;
+  flex: 45%;
+  text-align: right;
+  margin: auto;
   justify-content: flex-end;
-  align-items: center;
-  padding: 0;
-  list-style: none;
-
-  & li {
-    cursor: pointer;
+  & a {
+    color: $color7;
     padding: 10px;
     border-bottom: 2px solid transparent;
+    text-decoration: none;
   }
 
-  & li:hover {
+  & a:hover {
     border-bottom: 2px solid $color1;
   }
 }
 
 .logo {
-  flex: 1 15%;
+  flex: 15%;
   margin-right: auto;
   background-image: url('./assets/img/logo-bg.jpg');
   background-repeat: no-repeat;
@@ -139,16 +137,16 @@ header {
   .menu {
     display: none;
     flex-flow: column;
-    flex: 1 100%;
     justify-content: flex-start;
+    flex: 1 100%;
+    text-align: center;
     background-color: $color2;
     height: 100vh;
-    & li {
+    & a {
       border-bottom: 1px solid $color4;
       color: $color5;
       display: block;
       width: 100%;
-      text-align: center;
       padding: 10px 0;
     }
   }
