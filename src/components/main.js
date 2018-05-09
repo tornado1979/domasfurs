@@ -41,11 +41,12 @@ class Main extends Component {
   render(){
     const clients = this.state.clients.map(client => {
       return <Container
+        imgWidth='fixed'
         key={client.id}
-        type="image"
-        source={imgSmall}
-        message={client.name}
         link=""
+        message={client.name}
+        source={imgSmall}
+        type="image"
       />
     })
     console.log(clients, this.state.clients) // eslint-disable-line

@@ -6,11 +6,14 @@ import Message from './message'
 
 import './container.scss'
 
-const Container = ({hasButton, hasMessage, source}) => {
+const Container = ({hasButton, hasMessage, imgWidth, source}) => {
+
+  const img_width = imgWidth === 'fixed' ? '150px' : '100%'
+
   return (
     <div className="panel">
       <div className="panel--wrapper" >
-        <img src={source} />
+        <img src={source} style={{maxWidth: img_width}}/>
         {hasButton && <Button
           border='#fff'
           color='transparent'
@@ -28,6 +31,7 @@ const Container = ({hasButton, hasMessage, source}) => {
 Container.propTypes = {
   hasButton: propTypes.bool,
   hasMessage: propTypes.bool,
+  imgWidth: propTypes.oneOf(['responsive', 'fixed']),
   link: propTypes.string,
   message: propTypes.string,
   source: propTypes.string,
