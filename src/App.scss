@@ -9,8 +9,13 @@ $color4: #000; // Menus border-bottom
 $color5: #000; // font color white
 $color6: #fff; //  header bg
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Tahoma;
+  margin: 0;
 }
 
 #root {
@@ -30,7 +35,7 @@ body {
   flex: 1 100%;
   display: flex;
   justify-content: space-between;
-  height: 110px;
+  height: 90px;
   max-width:80%;
   flex-flow: row nowrap;
 }
@@ -46,6 +51,7 @@ header {
 }
 
 .menu {
+  flex: 1 45%;
   display: flex;
   flex-flow: row;
   justify-content: flex-end;
@@ -65,11 +71,13 @@ header {
 }
 
 .logo {
+  flex: 1 15%;
   margin-right: auto;
   background-image: url('./assets/img/logo-bg.jpg');
   background-repeat: no-repeat;
   width: 300px;
   background-position: left;
+  background-size: 170px;
 }
 
 #menu-toggle {
@@ -84,7 +92,7 @@ header {
 #menu-toggle:checked~ {
   & .label-toggle {
     position: relative;
-    top: 53px;
+    top: 28px;
     width: 32px;
     height: 32px;
     opacity: 0.7;
@@ -101,25 +109,25 @@ header {
   }
 
   & .label-toggle:before {
-    top: -55px;
+    top: -28px;
     transform: rotate(45deg);
   }
   
   & .label-toggle:after {
-    top: 1px;
+    top: 0px;
     transform: rotate(-45deg);
   }
 }
 
 // Hide menu 'X' button
-@media (min-width: 1008px) {
+@media (min-width: 780px) {
   .label-toggle:before, .label-toggle:after {
     display: none !important;
   }
 }
 
 // Medium screens, show menu button
-@media (max-width: 1007px) {
+@media (max-width: 780px) {
   .navBar {
     flex-flow: row wrap;
   }
@@ -149,9 +157,8 @@ header {
     background: linear-gradient(to bottom, $color3 0%, $color3 20%, transparent 20%, transparent 40%, $color3 40%, $color3 60%, transparent 60%, transparent 80%, $color3 80%, $color3 100%); //Gradient Hamburger
     content: ' ';
     display: block;
-    float: right;
     height: 35px;
-    margin-top: 56px;
+    margin-top: 28px;
     width: 35px;
     visibility: visible;
   }
@@ -161,8 +168,9 @@ header {
     background-image: url('./assets/img/logo-sm.jpg');
     background-repeat: no-repeat;
     width: 110px;
-    height: 110px;
+    height: 90px;
     background-position: left;
+    background-size: 76px;
   }
 
 }

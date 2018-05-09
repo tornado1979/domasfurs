@@ -1,7 +1,12 @@
 main {
-  margin-top: 110px;
+  margin-top: 90px;
   display: flex;
   width: 80%;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.clientsBlock {
+  display: flex;
+  width: 100%;
 }
