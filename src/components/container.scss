@@ -1,11 +1,35 @@
+$without-bg1: gold;
+$without-bg2: transparent;
+
 .container {
   flex: 1 100%;
 }
 
 .panel {
+  margin: 5px 0;
   &--wrapper {
     flex-direction: column;
     display: flex;
     position: relative;
+
+    &--sized {
+      height: 200px;
+      position: relative;
+
+      &.with-bg1 {
+        background-image: url('../assets/img/bg-750x360.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+
+      &.without-bg1 {
+        background-color: $without-bg1;
+      }
+
+      &.without-bg2 {
+        background-color: $without-bg2;
+      }
+    }
   }
 }
