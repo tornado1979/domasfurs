@@ -8,6 +8,7 @@ import Message from './message'
 import './container.scss'
 
 const Container = ({
+  bgTemplate,
   hasBackground,
   hasButton,
   hasImg,
@@ -21,8 +22,8 @@ const Container = ({
   const panelClass = classnames({
     'panel--wrapper': !isSized,
     'panel--wrapper--sized': isSized,
-    'with-bg': hasBackground,
-    'without-bg': hasBackground,
+    [`with-${bgTemplate}`]: hasBackground,
+    [`without-${bgTemplate}`]: !hasBackground,
   })
 
   // affects small blocks under then main image block
@@ -48,12 +49,14 @@ const Container = ({
 }
 
 Container.defaultProps = {
+  bgTemplate: 'bg1', // bg template e.g. -bg1, -bg2 etc
   hasBackground: false,
   hasImg: true,
   text: 'Add a message that you want to accompany the image',
 }
 
 Container.propTypes = {
+  bgTemplate: propTypes.string.isRequired,
   hasBackground: propTypes.bool,
   hasButton: propTypes.bool,
   hasImg: propTypes.bool,
