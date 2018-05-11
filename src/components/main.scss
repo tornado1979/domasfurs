@@ -12,7 +12,7 @@ main {
 .clientsBlock {
   padding:10px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
   width: 100%;
 }
@@ -22,7 +22,7 @@ main {
   padding: 10px 0;
   &.with-subblocks {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row wrap;
     & .panel {
       flex: 1;
@@ -36,7 +36,7 @@ main {
   }
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 570px){
   .horizontalBlock {
 
     &.with-subblocks {

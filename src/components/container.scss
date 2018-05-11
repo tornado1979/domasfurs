@@ -6,6 +6,7 @@ $without-bg2: transparent;
 }
 
 .panel {
+  margin: 5px 0;
   &--wrapper {
     flex-direction: column;
     display: flex;

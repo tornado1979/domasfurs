@@ -19,6 +19,7 @@ const MainBlock = ({
   isMonoblock,
   isReverse,
   source,
+  text,
   title}) => {
   const blockClass = classnames({
     'direction-reverse': isReverse,
@@ -26,15 +27,15 @@ const MainBlock = ({
     [`bg--${bgTemplate}`]: bgTemplate,
   })
   return (
-    <div className={`block-wrapper ${blockClass}`} >
+    <div className={`main-block ${blockClass}`} >
       {hasTitle && <div className="col-title">{title}</div>}
       {hasImg && <div className="col-img">
         <img src={source} />
       </div>}
       {hasMessage && <div className="col-text">
-        message
+        {text}
       </div>}
-      {/*A. 3 small blocks on the same line*/}
+      {/*A. 6 small blocks on two lines space-around*/}
       <div className="horizontalBlock with-subblocks">
         <Block
           hasTitle={true}
@@ -51,9 +52,6 @@ const MainBlock = ({
           source={imgLoremIpsum3} // image source
           title='Title'
         />
-      </div>
-      {/*B. 3 small blocks on the same line*/}
-      <div className="horizontalBlock with-subblocks">
         <Block
           hasTitle={true}
           source={imgLoremIpsum3} // image source
@@ -76,7 +74,7 @@ const MainBlock = ({
 
 MainBlock.propTypes = {
   isMonoblock: propTypes.bool,
-  isReverse: propTypes.string,
+  isReverse: propTypes.bool,
   source: propTypes.string.isRequired,
 }
 

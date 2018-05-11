@@ -151,7 +151,8 @@ class Main extends Component {
           isMonoblock={false}
           isReverse={false} // '1.image & 2.text' or '1.text & 2.image'
           source={imgLoremIpsum4}
-          text='Lorem Ipsum'
+          text='Neque porro quisquam est qui dolorem ipsum quia
+           dolor sit amet, consectetur, adipisci velit...'
           title='Main Title' />
       </main>
     )

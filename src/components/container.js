@@ -35,7 +35,7 @@ const Container = ({
         {hasImg && <img src={source} style={{maxWidth: img_width}}/>}
         {hasButton && <Button
           border='#fff'
-          color='transparent'
+          color='gold'
           fontColor='#fff'
           text='Ask Demo'
         />}

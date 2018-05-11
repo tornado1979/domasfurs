@@ -2,10 +2,13 @@
   width: 100%;
 }
 
+.main-block,
 .block-wrapper {
+    margin: 15px 0;
     box-sizing: border-box;
     text-align: center;
     width: 30%;
+    min-width: 160px;
   
     & .col-img {
       width: 100%;
@@ -16,10 +19,10 @@
     }
 
     & .col-title {
-      width: 100%;
       margin: auto;
+      width: 100%;
       font-weight: 700;
-      line-height: 18px;
+      line-height: 30px;
       font-size: 18px;
     }
   
@@ -69,3 +72,9 @@
     }
     }
   }  
+
+.main-block {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}

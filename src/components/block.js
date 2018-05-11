@@ -34,7 +34,7 @@ const Block = ({
 
 Block.propTypes = {
   isMonoblock: propTypes.bool,
-  isReverse: propTypes.string,
+  isReverse: propTypes.bool,
   source: propTypes.string.isRequired,
 }
 
