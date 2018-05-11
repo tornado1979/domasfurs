@@ -2,10 +2,10 @@ import React, {
   Component,
 } from 'react'
 
-import logo from './logo.svg'
 import './App.scss'
 import Header from './components/header'
 import Main from './components/main'
+import Footer from './components/footer'
 
 class App extends Component {
   render() {
@@ -14,6 +14,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <Main />
+        <Footer
+          bgTemplate = 'template1' // background template
+        />
       </div>
     )
   }

@@ -9,12 +9,16 @@ import './block.scss'
 
 const Block = ({
   bgTemplate,
+  hasMessage,
   hasTitle,
+  isCopywrite,
   isMonoblock,
   isReverse,
   source,
+  text,
   title}) => {
   const blockClass = classnames({
+    'copywrite': isCopywrite,
     'direction-reverse': isReverse,
     'monoblock': isMonoblock,
     [`bg--${bgTemplate}`]: bgTemplate,
@@ -25,9 +29,9 @@ const Block = ({
       <div className="col-img">
         <img src={source} />
       </div>
-      <div className="col-text">
-        message
-      </div>
+      {hasMessage && <div className="col-text">
+        {text}
+      </div>}
     </div>
   )
 }

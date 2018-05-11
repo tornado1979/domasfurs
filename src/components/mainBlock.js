@@ -13,6 +13,7 @@ import imgLoremIpsum5 from '../assets/img/Lorem-Ipsum5.jpg'
 
 const MainBlock = ({
   bgTemplate,
+  children,
   hasImg,
   hasMessage,
   hasTitle,
@@ -26,6 +27,7 @@ const MainBlock = ({
     'monoblock': isMonoblock,
     [`bg--${bgTemplate}`]: bgTemplate,
   })
+
   return (
     <div className={`main-block ${blockClass}`} >
       {hasTitle && <div className="col-title">{title}</div>}
@@ -35,8 +37,22 @@ const MainBlock = ({
       {hasMessage && <div className="col-text">
         {text}
       </div>}
+      {/*4 blocks : lists & payments img*/}
+      {/*and social blocks*/}
+      {children &&
+        <div>
+          <div className="horizontalBlock with-subblocks">
+            {children[0]}
+          </div>
+          <div className="horizontalBlock with-subblocks social">
+            <div className='social-wrapper'>
+              {children[1]}
+              {children[2]}
+            </div>
+          </div>
+        </div>}
       {/*A. 6 small blocks on two lines space-around*/}
-      <div className="horizontalBlock with-subblocks">
+      {!children && <div className="horizontalBlock with-subblocks">
         <Block
           hasTitle={true}
           source={imgLoremIpsum3} // image source
@@ -67,7 +83,7 @@ const MainBlock = ({
           source={imgLoremIpsum3} // image source
           title='Title'
         />
-      </div>
+      </div>}
     </div>
   )
 }
