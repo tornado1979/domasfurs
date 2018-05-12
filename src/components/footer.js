@@ -38,9 +38,9 @@ const Footer = ({bgTemplate}) => {
         hasMessage={false}
         hasTitle={false}
         key={index+10}
+        source={items[0].img}
         text=''
         title=''
-        source={items[0].img}
       />
     } else {
       return <Block
@@ -75,9 +75,9 @@ const Footer = ({bgTemplate}) => {
         hasMessage={false}
         hasTitle={false}
         key={index+10}
+        source={items[0].img}
         text=''
         title=''
-        source={items[0].img}
       />
     } else {
       return <Block
@@ -93,13 +93,12 @@ const Footer = ({bgTemplate}) => {
   const copywriteBlock = <Block
     hasMessage={true}
     hasTitle={false}
+    isCopywrite={true}
     key='123'
     text={copywrite}
-    title=''
-    isCopywrite={true} // gets special className
+    title='' // gets special className
   />
 
-  console.log(copywriteBlock) // eslint-disable-line
   return (
     <footer className={footerClass}>
       <MainBlock
@@ -120,6 +119,10 @@ const Footer = ({bgTemplate}) => {
       </MainBlock>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  bgTemplate: propTypes.string.isRequired,
 }
 
 export default Footer

@@ -1,4 +1,5 @@
 $footer-bg1: #d8d8d8;
+$border-color: grey;
 
 footer {
   width: 100%;
@@ -30,7 +31,7 @@ footer {
       justify-content: space-between;
 
       & .block-wrapper {
-        border: none;
+        cursor: pointer;
         width: 40px;
         max-width: 40px;
         min-width: 40px;
@@ -40,22 +41,12 @@ footer {
           text-align: right;
         }
       }
-      
-      & .block-wrapper:nth-child(1) {
-        border: none;
-      }
     }
 
     & .block-wrapper {
       flex: 1;
-      border-right: 2px solid grey;
-
-      &:nth-child(1) {
-        border-left: 2px solid grey;
-      }
 
       &:last-child {
-        border: 0;
         flex: 1 25%;
       }
 
@@ -71,6 +62,12 @@ footer {
 
           & a {
             padding: 0;
+
+            &:first-child {
+              font-weight: bold;
+              border-bottom: 2px solid $border-color;
+              width: 100%;
+            }
           }
         }
       }
