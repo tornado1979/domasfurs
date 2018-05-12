@@ -1,0 +1,18 @@
+$galllery-bg-color: lightgray;
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: .5vw;
+  margin: .5vw;
+  background-color: $galllery-bg-color;
+
+  & div {
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+    cursor: pointer;
+  }
+}

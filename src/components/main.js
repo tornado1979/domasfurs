@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import Container from './container'
 import Block from './block'
 import MainBlock from './mainBlock'
+import Gallery from './galllery'
+import { photos } from '../data/galleryData'
 
 import './main.scss'
+
 import img1 from '../assets/img/bg-750x360.jpg'
 import imgLoremIpsum from '../assets/img/Lorem-Ipsum.jpg'
 import imgLoremIpsum2 from '../assets/img/Lorem-Ipsum2.jpg'
@@ -157,6 +160,10 @@ class Main extends Component {
           text='Neque porro quisquam est qui dolorem ipsum quia
            dolor sit amet, consectetur, adipisci velit...'
           title='Main Title' />
+        {/*Images Gallery*/}
+        <Gallery
+          photos={photos}
+        />
       </main>
     )
   }
