@@ -22,7 +22,7 @@ const Footer = ({bgTemplate}) => {
     .map(key => {
       return footerData[key].items.map(listItem => {
         if(footerData[key].type !== 'image') {
-          return <div key={listItem}>{listItem}</div>
+          return <a href="/" key={listItem}>{listItem}</a>
         } else {
           return {
             img: listItem,
@@ -46,6 +46,7 @@ const Footer = ({bgTemplate}) => {
       return <Block
         hasMessage={true}
         hasTitle={false}
+        isMenu={true} // menu gets .menu class
         key={index+10}
         text={items}
         title=''

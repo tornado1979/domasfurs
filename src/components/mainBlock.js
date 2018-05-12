@@ -91,7 +91,7 @@ const MainBlock = ({
 MainBlock.propTypes = {
   isMonoblock: propTypes.bool,
   isReverse: propTypes.bool,
-  source: propTypes.string.isRequired,
+  source: propTypes.string,
 }
 
 export default MainBlock
