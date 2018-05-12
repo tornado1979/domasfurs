@@ -9,33 +9,44 @@ import './block.scss'
 
 const Block = ({
   bgTemplate,
+  hasMessage,
   hasTitle,
+  isCopywrite,
+  isMenu=false,
   isMonoblock,
   isReverse,
   source,
+  text,
   title}) => {
   const blockClass = classnames({
+    'block-wrapper': true,
+    'copywrite': isCopywrite,
     'direction-reverse': isReverse,
+    'menu': isMenu,
     'monoblock': isMonoblock,
     [`bg--${bgTemplate}`]: bgTemplate,
   })
+  const colTextClass = classnames({
+    'col-text': true,
+  })
   return (
-    <div className={`block-wrapper ${blockClass}`} >
+    <div className={blockClass} >
       {hasTitle && <div className="col-title">{title}</div>}
       <div className="col-img">
         <img src={source} />
       </div>
-      <div className="col-text">
-        message
-      </div>
+      {hasMessage && <div className={colTextClass}>
+        {text}
+      </div>}
     </div>
   )
 }
 
 Block.propTypes = {
+  isMenu: propTypes.bool,
   isMonoblock: propTypes.bool,
   isReverse: propTypes.bool,
-  source: propTypes.string.isRequired,
+  source: propTypes.string,
 }
 
 export default Block

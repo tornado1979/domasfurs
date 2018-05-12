@@ -56,15 +56,16 @@ header {
   text-align: right;
   margin: auto;
   justify-content: flex-end;
+
   & a {
     color: $color7;
     padding: 10px;
     border-bottom: 2px solid transparent;
     text-decoration: none;
-  }
-
-  & a:hover {
-    border-bottom: 2px solid $color1;
+  
+    &:hover {
+      border-bottom: 2px solid $color1;  
+    }
   }
 }
 
@@ -134,20 +135,23 @@ header {
     cursor: pointer;
   }
 
-  .menu {
-    display: none;
-    flex-flow: column;
-    justify-content: flex-start;
-    flex: 1 100%;
-    text-align: center;
-    background-color: $color2;
-    height: 100vh;
-    & a {
-      border-bottom: 1px solid $color4;
-      color: $color5;
-      display: block;
-      width: 100%;
-      padding: 10px 0;
+  header {
+
+    & .menu {
+        display: none;
+        flex-flow: column;
+        justify-content: flex-start;
+        flex: 1 100%;
+        text-align: center;
+        background-color: $color2;
+        height: 100vh;
+        & a {
+          border-bottom: 1px solid $color4;
+          color: $color5;
+          display: block;
+          width: 100%;
+          padding: 10px 0;
+        }
     }
   }
 

@@ -56,7 +56,7 @@ class Main extends Component {
         type="image"
       />
     })
-    console.log(clients, this.state.clients) // eslint-disable-line
+
     return(
       <main>
         {/*main Image block*/}
@@ -111,6 +111,7 @@ class Main extends Component {
         <div className="mono-block">
           <Block
             bgTemplate='template1'
+            hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
             isReverse={true} // '1.image & 2.text' or '1.text & 2.image'
@@ -123,6 +124,7 @@ class Main extends Component {
         <div className="mono-block">
           <Block
             bgTemplate='template3'
+            hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
             isReverse={false} // '1.image & 2.text' or '1.text & 2.image'
@@ -135,6 +137,7 @@ class Main extends Component {
         <div className="mono-block">
           <Block
             bgTemplate='template1'
+            hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
             isReverse={true} // '1.image & 2.text' or '1.text & 2.image'
