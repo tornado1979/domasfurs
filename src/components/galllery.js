@@ -16,7 +16,6 @@ class Gallery extends Component {
   }
 
   openLightbox(event, obj) {
-    console.log(obj) // eslint-disable-line
     this.setState({
       currentImage: obj.id,
       lightboxIsOpen: true,
@@ -51,20 +50,23 @@ class Gallery extends Component {
         />
       </div>
     })
-    console.log(images) // eslint-disable-line
+
     return (
       <div className="gallery">
         {images}
-        <LightBox images={this.props.photos}
-          onClose={this.closeLightbox}
-          onClickPrev={this.gotoPrevious}
-          onClickNext={this.gotoNext}
-          currentImage={this.state.currentImage}
+        <LightBox currentImage={this.state.currentImage}
+          images={this.props.photos}
           isOpen={this.state.lightboxIsOpen}
+          onClickNext={this.gotoNext}
+          onClickPrev={this.gotoPrevious}
+          onClose={this.closeLightbox}
         />
       </div>
     )
   }
 }
 
+Gallery.propTypes = {
+  photos: propTypes.array.isRequired,
+}
 export default Gallery

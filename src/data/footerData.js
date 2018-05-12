@@ -6,34 +6,33 @@ import contact from '../assets/img/icon_contact.png'
 
 export const socialData = {
   list1: {
-    type: 'image',
     items: [
       facebook,
     ],
+    type: 'image',
   },
   list2: {
-    type: 'image',
     items: [
       linkedin,
     ],
+    type: 'image',
   },
   list3: {
-    type: 'image',
     items: [
       youtube,
     ],
+    type: 'image',
   },
   list4: {
-    type: 'image',
     items: [
       contact,
     ],
+    type: 'image',
   },
 }
 
 export const footerData = {
   list1:{
-    type: 'list',
     items: [
       '1st list',
       'list item 1',
@@ -43,9 +42,9 @@ export const footerData = {
       'list item 5',
       'list item 6',
     ],
+    type: 'list',
   },
   list2:{
-    type: 'list',
     items: [
       '2nd list',
       'list item 7',
@@ -55,9 +54,9 @@ export const footerData = {
       'list item 11',
       'list item 12',
     ],
+    type: 'list',
   },
   list3:{
-    type: 'list',
     items: [
       '3rd list',
       'list item 13',
@@ -67,12 +66,13 @@ export const footerData = {
       'list item 17',
       'list item 18',
     ],
+    type: 'list',
   },
   list4: {
-    type: 'image',
     items: [
       img,
     ],
+    type: 'image',
   },
 }
 
