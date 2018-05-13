@@ -97,9 +97,16 @@ const MainBlock = ({
 }
 
 MainBlock.propTypes = {
+  bgTemplate: propTypes.string,
+  children: propTypes.array,
+  hasImage: propTypes.bool,
+  hasMessage: propTypes.bool,
+  hasTitle: propTypes.bool,
   isMonoblock: propTypes.bool,
   isReverse: propTypes.bool,
   source: propTypes.string,
+  text: propTypes.string,
+  title: propTypes.string,
 }
 
 export default MainBlock

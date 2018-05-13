@@ -44,10 +44,20 @@ const Block = ({
 }
 
 Block.propTypes = {
+  bgTemplate: propTypes.string,
+  hasImage: propTypes.bool,
+  hasMessage: propTypes.bool,
+  hasTitle: propTypes.bool,
+  isCopywrite: propTypes.bool,
   isMenu: propTypes.bool,
   isMonoblock: propTypes.bool,
   isReverse: propTypes.bool,
   source: propTypes.string,
+  text: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.array,
+  ]),
+  title: propTypes.string,
 }
 
 export default Block
