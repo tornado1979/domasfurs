@@ -92,3 +92,18 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 667px) {
+  .social-wrapper {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    & .block-wrapper {
+
+      &.copywrite {
+        margin: auto !important;
+        text-align: center !important;
+      }
+    }
+  }
+}
