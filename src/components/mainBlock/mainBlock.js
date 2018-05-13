@@ -2,16 +2,12 @@ import React from 'react'
 import propTypes from 'prop-types'
 import classnames from 'classnames'
 
-import Button from './button'
-import Message from './message'
+import '../block/block.scss'
+import { Block } from '../block'
 
-import './block.scss'
-import Block from './block'
+import imgLoremIpsum3 from '../../assets/img/Lorem-Ipsum3.jpg'
 
-import imgLoremIpsum3 from '../assets/img/Lorem-Ipsum3.jpg'
-import imgLoremIpsum5 from '../assets/img/Lorem-Ipsum5.jpg'
-
-const MainBlock = ({
+export const MainBlock = ({
   bgTemplate,
   children,
   hasImage,
@@ -108,5 +104,3 @@ MainBlock.propTypes = {
   text: propTypes.string,
   title: propTypes.string,
 }
-
-export default MainBlock

@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 import './message.scss'
 
-const Message = ({text, textType}) => {
+export const Message = ({text, textType}) => {
 
   const messageClass = classnames({
     'message--comments': textType === 'comment', // when the text is TITLE
@@ -28,5 +28,3 @@ Message.propTypes = {
   text: propTypes.string.isRequired,
   textType: propTypes.string.isRequired,
 }
-
-export default Message

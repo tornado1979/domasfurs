@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Container from './container'
-import Block from './block'
-import MainBlock from './mainBlock'
-import Gallery from './galllery'
+import { Container } from './container/index'
+import { Block } from './block'
+import { MainBlock } from './mainBlock'
+import Gallery from './gallery/gallery'
 
 import { photos } from '../data/galleryData'
 import { clients } from '../data/clientsData'

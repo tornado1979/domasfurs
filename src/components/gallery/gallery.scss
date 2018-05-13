@@ -1,4 +1,4 @@
-$galllery-bg-color: lightgray;
+$gallery-bg-color: lightgray;
 
 .gallery {
   display: flex;
@@ -7,7 +7,7 @@ $galllery-bg-color: lightgray;
   width: 100%;
   padding: .5vw;
   margin: .5vw;
-  background-color: $galllery-bg-color;
+  background-color: $gallery-bg-color;
 
   & div {
     flex: auto;

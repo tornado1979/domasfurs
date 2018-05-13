@@ -2,12 +2,12 @@ import React from 'react'
 import propTypes from 'prop-types'
 import classnames from 'classnames'
 
-import Button from './button'
-import Message from './message'
+import { Button } from '../button'
+import { Message } from '../message'
 
 import './container.scss'
 
-const Container = ({
+export const Container = ({
   bgTemplate,
   hasBackground,
   hasButton,
@@ -71,5 +71,3 @@ Container.propTypes = {
   textType: propTypes.oneOf(['title', 'comment']), // title: large with shadow
   type: propTypes.string.isRequired,
 }
-
-export default Container

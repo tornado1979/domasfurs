@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 
 import './button.scss'
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <button
       className="btn--image"
@@ -27,5 +27,3 @@ Button.defaultProps = {
   fontColor: '#fff',
   text: 'click me',
 }
-
-export default Button

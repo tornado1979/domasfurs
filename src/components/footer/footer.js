@@ -3,16 +3,16 @@ import propTypes from 'prop-types'
 import classnames from 'classnames'
 
 import './footer.scss'
-import MainBlock from './mainBlock'
-import Block from './block'
+import { MainBlock } from '../mainBlock'
+import { Block } from '../block'
 
 import {
   copywrite,
   footerData,
   socialData,
-} from '../data/footerData'
+} from '../../data/footerData'
 
-const Footer = ({bgTemplate}) => {
+export const Footer = ({bgTemplate}) => {
   const footerClass = classnames({
     [`bg--${bgTemplate}`]: true,
   })
@@ -129,5 +129,3 @@ const Footer = ({bgTemplate}) => {
 Footer.propTypes = {
   bgTemplate: propTypes.string.isRequired,
 }
-
-export default Footer
