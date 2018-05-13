@@ -21,24 +21,23 @@ footer {
     flex-wrap: wrap;
     align-items: center;
 
-    &.social {
-      justify-content: flex-start;
-    }
-
     & .social-wrapper {
       display: flex;
       width: 100%;
-      justify-content: space-between;
+      justify-content: flex-start;
 
       & .block-wrapper {
         cursor: pointer;
         width: 40px;
         max-width: 40px;
         min-width: 40px;
+        margin: 0;
 
         &.copywrite {
           min-width: 80%;
           text-align: right;
+          margin-left: auto;
+          align-self: center;
         }
       }
     }
@@ -47,12 +46,12 @@ footer {
       flex: 1;
 
       &:last-child {
-        flex: 1 25%;
+        align-self: flex-end;
       }
 
       &.menu {
         min-width: 120px;
-        flex: 1 25%;
+        width: 200px;
 
         & .col-text {
           display: inline-flex;

@@ -9,6 +9,7 @@ import './block.scss'
 
 const Block = ({
   bgTemplate,
+  hasImage=false,
   hasMessage,
   hasTitle,
   isCopywrite,
@@ -32,9 +33,9 @@ const Block = ({
   return (
     <div className={blockClass} >
       {hasTitle && <div className="col-title">{title}</div>}
-      <div className="col-img">
+      {hasImage && <div className="col-img">
         <img src={source} />
-      </div>
+      </div>}
       {hasMessage && <div className={colTextClass}>
         {text}
       </div>}

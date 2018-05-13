@@ -14,7 +14,7 @@ import imgLoremIpsum5 from '../assets/img/Lorem-Ipsum5.jpg'
 const MainBlock = ({
   bgTemplate,
   children,
-  hasImg,
+  hasImage,
   hasMessage,
   hasTitle,
   isMonoblock,
@@ -31,7 +31,7 @@ const MainBlock = ({
   return (
     <div className={`main-block ${blockClass}`} >
       {hasTitle && <div className="col-title">{title}</div>}
-      {hasImg && <div className="col-img">
+      {hasImage && <div className="col-img">
         <img src={source} />
       </div>}
       {hasMessage && <div className="col-text">
@@ -54,33 +54,41 @@ const MainBlock = ({
       {/*A. 6 small blocks on two lines space-around*/}
       {!children && <div className="horizontalBlock with-subblocks">
         <Block
+          hasImage={true}
           hasTitle={true}
           source={imgLoremIpsum3} // image source
           title='Title'
         />
         <Block
+          hasImage={true}
           hasTitle={true}
           source={imgLoremIpsum3} // image source
           title='Title'
         />
         <Block
+          hasImage={true}
           hasTitle={true}
           source={imgLoremIpsum3} // image source
           title='Title'
         />
         <Block
+          hasImage={true}
           hasTitle={true}
           source={imgLoremIpsum3} // image source
           title='Title'
         />
         <Block
+          hasImage={true}
           hasTitle={true}
           source={imgLoremIpsum3} // image source
           title='Title'
         />
         <Block
-          hasTitle={true}
-          source={imgLoremIpsum3} // image source
+          hasImage={true}
+          hasMessage={false}
+          hasTitle={false}
+          source={imgLoremIpsum3}
+          text='' // image source
           title='Title'
         />
       </div>}

@@ -3,7 +3,9 @@ import Container from './container'
 import Block from './block'
 import MainBlock from './mainBlock'
 import Gallery from './galllery'
+
 import { photos } from '../data/galleryData'
+import { clients } from '../data/clientsData'
 
 import './main.scss'
 
@@ -18,32 +20,7 @@ class Main extends Component {
   constructor(props){
     super(props)
     this.state = {
-      clients: [
-        {
-          id: 0,
-          name: 'client1',
-        },
-        {
-          id: 1,
-          name: 'client1',
-        },
-        {
-          id: 2,
-          name: 'client1',
-        },
-        {
-          id: 3,
-          name: 'client1',
-        },
-        {
-          id: 4,
-          name: 'client1',
-        },
-        {
-          id: 5,
-          name: 'client1',
-        },
-      ],
+      clients,
     }
   }
 
@@ -55,7 +32,7 @@ class Main extends Component {
         key={client.id}
         link=""
         message={client.name}
-        source={imgLoremIpsum2}
+        source={client.src}
         type="image"
       />
     })
@@ -84,7 +61,7 @@ class Main extends Component {
         <div className="horizontalBlock">
           <Container
             hasBackground={false} // background is image or color
-            hasButton={false}
+            hasButton={true}
             hasImg={false}
             hasMessage={true}
             hasSubTitle={true}
@@ -101,12 +78,15 @@ class Main extends Component {
         {/*3 small blocks on the same line*/}
         <div className="horizontalBlock with-subblocks">
           <Block
+            hasImage={true}
             source={imgLoremIpsum3} // image source
           />
           <Block
+            hasImage={true}
             source={imgLoremIpsum3} // image source
           />
           <Block
+            hasImage={true}
             source={imgLoremIpsum3} // image source
           />
         </div>
@@ -114,19 +94,21 @@ class Main extends Component {
         <div className="mono-block">
           <Block
             bgTemplate='template1'
+            hasImage={true}
             hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
             isReverse={true} // '1.image & 2.text' or '1.text & 2.image'
             source={imgLoremIpsum4}
-            text='Lorem Ipsum'
-            title='Lorem Ipsum'
+            text='my message'
+            title='THE title'
           />
         </div>
         {/*monoblock whole line, row*/}
         <div className="mono-block">
           <Block
             bgTemplate='template3'
+            hasImage={true}
             hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
@@ -140,6 +122,7 @@ class Main extends Component {
         <div className="mono-block">
           <Block
             bgTemplate='template1'
+            hasImage={true}
             hasMessage={true}
             hasTitle={true}
             isMonoblock={true}
@@ -151,7 +134,7 @@ class Main extends Component {
         </div>
         <MainBlock
           bgTemplate='template2'
-          hasImg={false}
+          hasImage={false}
           hasMessage={true}
           hasTitle={true}
           isMonoblock={false}

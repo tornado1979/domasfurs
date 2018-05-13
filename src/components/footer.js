@@ -35,6 +35,7 @@ const Footer = ({bgTemplate}) => {
   const innerBlocks = lista.map((items, index) => {
     if (items[0].type && items[0].type === 'image'){
       return <Block
+        hasImage={true}
         hasMessage={false}
         hasTitle={false}
         key={index+10}
@@ -44,6 +45,7 @@ const Footer = ({bgTemplate}) => {
       />
     } else {
       return <Block
+        hasImage={false}
         hasMessage={true}
         hasTitle={false}
         isMenu={true} // menu gets .menu class
@@ -72,6 +74,7 @@ const Footer = ({bgTemplate}) => {
   const socialBlocks = socialList.map((items, index) => {
     if (items[0].type && items[0].type === 'image'){
       return <Block
+        hasImage={true}
         hasMessage={false}
         hasTitle={false}
         key={index+10}
@@ -81,6 +84,7 @@ const Footer = ({bgTemplate}) => {
       />
     } else {
       return <Block
+        hasImage={true}
         hasMessage={true}
         hasTitle={false}
         key={index+10}
@@ -91,6 +95,7 @@ const Footer = ({bgTemplate}) => {
   })
 
   const copywriteBlock = <Block
+    hasImage={false}
     hasMessage={true}
     hasTitle={false}
     isCopywrite={true}
