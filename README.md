@@ -14,6 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## About
 * A responsive Reactjs front-page template with flexbox.
   You can check the responsivness of the page on any free online tool, like http://www.responsinator.com/
+  [a quick visual of the web-app](readme_imgs/gif.gif)
 
   ![final outcome](readme_imgs/gif.gif)
 
