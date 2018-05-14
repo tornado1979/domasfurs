@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import propTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -36,7 +36,7 @@ export const MainBlock = ({
       {/*4 blocks : lists & payments img*/}
       {/*and social blocks*/}
       {children &&
-        <div>
+        <Fragment>
           <div className="horizontalBlock with-subblocks">
             {children[0]}
           </div>
@@ -46,7 +46,7 @@ export const MainBlock = ({
               {children[2]}
             </div>
           </div>
-        </div>}
+        </Fragment>}
       {/*A. 6 small blocks on two lines space-around*/}
       {!children && <div className="horizontalBlock with-subblocks">
         <Block
