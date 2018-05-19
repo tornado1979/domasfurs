@@ -9,12 +9,18 @@ import { clients } from '../data/clientsData'
 
 import './main.scss'
 
+import docaNew from '../assets/img/doca-new.jpg'
+import cat1 from '../assets/img/cat1.jpg'
+import cat2 from '../assets/img/cat2.jpg'
+import cat3 from '../assets/img/cat3.jpg'
+
 import img1 from '../assets/img/bg-750x360.jpg'
-import imgLoremIpsum from '../assets/img/Lorem-Ipsum.jpg'
-import imgLoremIpsum2 from '../assets/img/Lorem-Ipsum2.jpg'
-import imgLoremIpsum3 from '../assets/img/Lorem-Ipsum3.jpg'
-import imgLoremIpsum4 from '../assets/img/Lorem-Ipsum4.png'
-import imgLoremIpsum5 from '../assets/img/Lorem-Ipsum5.jpg'
+import promo1 from '../assets/img/promo1.jpg'
+import promo2 from '../assets/img/promo2.jpg'
+
+import shipping from '../assets/img/free-shipping.png'
+import moneyBack from '../assets/img/money-back.png'
+import support from '../assets/img/support.png'
 
 class Main extends Component {
   constructor(props){
@@ -22,6 +28,12 @@ class Main extends Component {
     this.state = {
       clients,
     }
+    this.textInput = React.createRef()
+    this.focusTextInput = this.focusTextInput.bind(this)
+  }
+
+  focusTextInput () {
+    this.textInput.current.focus()
   }
 
   render(){
@@ -37,19 +49,55 @@ class Main extends Component {
       />
     })
 
+    const promoMessage = [
+      (
+        <table>
+          <tbody>
+            <tr>
+              <td><h2>We are glad you have chosen our...</h2></td>
+            </tr>
+            <tr>
+              <td>
+                <p>What can be more convenient than having all the assortment
+                of any-type-of-products in one place?
+                When you don’t have to...</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      ),
+      (
+        <table>
+          <tbody>
+            <tr>
+              <td><h2>Improve your business and save your time...</h2></td>
+            </tr>
+            <tr>
+              <td>
+                <p>Thanks to an English entrepreneur Michael Aldrich who
+                   invented
+                online shopping in 1979,
+                you don’t necessarily have to do it....</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      ),
+    ]
+
     return(
       <main>
         {/*main Image block*/}
         <Container
-          hasButton={true} // container has button
+          hasButton={false} // container has button
           hasImg={true} // cotainer has <img>
           hasMessage={true} // container has message
           hasSubTitle={false} // constiner has sub-title
           imgWidth='responsive' // image on container is responsive or fixed
           isSized={false} // true on 'horizontalBlock'
           link="" // button link 
-          source={imgLoremIpsum} // image source
-          text='Add a message that you want to accompany the image'
+          source={docaNew} // image source doca-new.jpg
+          text='Doca new products collection'
           textType='title' // text type is 'title' or 'comment'
           type="image"
         />
@@ -60,11 +108,11 @@ class Main extends Component {
         {/*small horizontal block*/}
         <div className="horizontalBlock">
           <Container
-            hasBackground={false} // background is image or color
-            hasButton={true}
+            hasBackground={true} // background is image or color
+            hasButton={false}
             hasImg={false}
             hasMessage={true}
-            hasSubTitle={true}
+            hasSubTitle={false}
             imgWidth='responsive'
             isSized={true} // custom size of the block
             link=""
@@ -79,15 +127,27 @@ class Main extends Component {
         <div className="horizontalBlock with-subblocks">
           <Block
             hasImage={true}
-            source={imgLoremIpsum3} // image source
+            hasMessage={true}
+            hasTitle={false}
+            source={cat1} // image source
+            text='For her'
+            title='title..'
           />
           <Block
             hasImage={true}
-            source={imgLoremIpsum3} // image source
+            hasMessage={true}
+            hasTitle={false}
+            source={cat2} // image source
+            text='For all'
+            title='title..'
           />
           <Block
             hasImage={true}
-            source={imgLoremIpsum3} // image source
+            hasMessage={true}
+            hasTitle={false}
+            source={cat3} // image source
+            text='For him'
+            title='title..'
           />
         </div>
         {/*monoblock whole line, row reverse*/}
@@ -96,11 +156,11 @@ class Main extends Component {
             bgTemplate='template1'
             hasImage={true}
             hasMessage={true}
-            hasTitle={true}
+            hasTitle={false}
             isMonoblock={true}
             isReverse={true} // '1.image & 2.text' or '1.text & 2.image'
-            source={imgLoremIpsum4}
-            text='my message'
+            source={promo1}
+            text={promoMessage[0]}
             title='THE title'
           />
         </div>
@@ -110,29 +170,53 @@ class Main extends Component {
             bgTemplate='template3'
             hasImage={true}
             hasMessage={true}
-            hasTitle={true}
+            hasTitle={false}
             isMonoblock={true}
             isReverse={false} // '1.image & 2.text' or '1.text & 2.image'
-            source={imgLoremIpsum4}
-            text='Lorem Ipsum'
+            source={promo2}
+            text={promoMessage[0]}
             title='Lorem Ipsum'
           />
         </div>
-        {/*monoblock whole line, row reverse*/}
-        <div className="mono-block">
+        {/*3 small blocks on the same line FREE SHIPPING, MONEY BACK, SUPPORT*/}
+        <div className="horizontalBlock with-subblocks">
           <Block
-            bgTemplate='template1'
             hasImage={true}
             hasMessage={true}
             hasTitle={true}
-            isMonoblock={true}
-            isReverse={true} // '1.image & 2.text' or '1.text & 2.image'
-            source={imgLoremIpsum4}
-            text='Lorem Ipsum'
-            title='Lorem Ipsum'
+            isImageWidthAuto={true} /* images dont have the same the
+             width as their container */
+            source={shipping} // image source
+            text='We provide you with fast and free delivery regardless
+             of the product size and value.'
+            title='FREE SHIPPING'
+          />
+          <Block
+            hasImage={true}
+            hasMessage={true}
+            hasTitle={true}
+            isImageWidthAuto={true} /* images dont have the same the
+            width as their container */
+            source={moneyBack} // image source
+            text='30 Day Money Back Guarantee.
+            In order to return the goods please follow our returns policy.'
+            title='MONEY BACK'
+          />
+          <Block
+            hasImage={true}
+            hasMessage={true}
+            hasTitle={true}
+            isImageWidthAuto={true} /* images dont have the same the
+            width as their container */
+            source={support} // image source
+            text='Round-the-clock free hotline.
+            +3(800) 2345-6789'
+            title='24h SUPPORT'
           />
         </div>
-        <MainBlock
+
+        {/* this block shows 6 small images on two lines */}
+        {/*<MainBlock
           bgTemplate='template2'
           hasImage={false}
           hasMessage={true}
@@ -142,7 +226,7 @@ class Main extends Component {
           source={imgLoremIpsum4}
           text='Neque porro quisquam est qui dolorem ipsum quia
            dolor sit amet, consectetur, adipisci velit...'
-          title='Main Title' />
+        title='Main Title' />*/}
         {/*Images Gallery*/}
         <Gallery
           photos={photos}

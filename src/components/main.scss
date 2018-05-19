@@ -2,7 +2,7 @@ $horizontal-color: #99ce58; // horizontalBlock bg
 
 main {
   min-width:450px;
-  max-width: 980px;
+  max-width: 80%;
   margin-top: 90px;
   display: flex;
   width: 80%;
@@ -16,6 +16,7 @@ main {
   justify-content: space-around;
   flex-flow: row wrap;
   width: 100%;
+  align-items: center;
 }
 
 .horizontalBlock {

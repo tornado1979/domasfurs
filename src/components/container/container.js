@@ -17,6 +17,7 @@ export const Container = ({
   imgWidth,
   isSized,
   source,
+  subTitle,
   text,
   textType}) => {
   const panelClass = classnames({
@@ -43,6 +44,10 @@ export const Container = ({
           text={text}
           textType={textType}
         />}
+        {hasSubTitle && <Message
+          text={subTitle}
+          textType={textType}
+        />}
       </div>
     </div>
   )
@@ -52,6 +57,7 @@ Container.defaultProps = {
   bgTemplate: 'bg1', // bg template e.g. -bg1, -bg2 etc
   hasBackground: false,
   hasImg: true,
+  hasSubTitle: false,
   text: 'Add a message that you want to accompany the image',
 }
 
@@ -67,6 +73,7 @@ Container.propTypes = {
   link: propTypes.string,
   message: propTypes.string,
   source: propTypes.string,
+  subTitle: propTypes.string,
   text: propTypes.string.isRequired,
   textType: propTypes.oneOf(['title', 'comment']), // title: large with shadow
   type: propTypes.string.isRequired,
