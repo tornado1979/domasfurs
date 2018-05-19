@@ -1,9 +1,9 @@
-import img1 from '../assets/img/Lorem-Ipsum2.jpg'
-import img2 from '../assets/img/Lorem-Ipsum2.jpg'
-import img3 from '../assets/img/Lorem-Ipsum2.jpg'
-import img4 from '../assets/img/Lorem-Ipsum2.jpg'
-import img5 from '../assets/img/Lorem-Ipsum2.jpg'
-import img6 from '../assets/img/Lorem-Ipsum2.jpg'
+import img1 from '../assets/img/pr1.jpg'
+import img2 from '../assets/img/pr2.jpg'
+import img3 from '../assets/img/pr3.jpg'
+import img4 from '../assets/img/pr4.jpg'
+import img5 from '../assets/img/pr5.jpg'
+import img6 from '../assets/img/pr6.jpg'
 
 export const clients = [
   {
