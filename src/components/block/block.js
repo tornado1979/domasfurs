@@ -6,24 +6,25 @@ import './block.scss'
 
 export const Block = ({
   bgTemplate,
-  hasImage=false,
+  hasImage = false,
   hasMessage,
   hasTitle,
   isCopywrite,
   isImageWidthAuto,
-  isMenu=false,
+  isMenu = false,
   isMonoblock,
   isReverse,
   source,
   text,
-  title}) => {
+  title,
+}) => {
   const blockClass = classnames({
     'block-wrapper': true,
-    'copywrite': isCopywrite,
+    copywrite: isCopywrite,
     'direction-reverse': isReverse,
     'image-auto-width': isImageWidthAuto,
-    'menu': isMenu,
-    'monoblock': isMonoblock,
+    menu: isMenu,
+    monoblock: isMonoblock,
     [`bg--${bgTemplate}`]: bgTemplate,
   })
   const colTextClass = classnames({
@@ -32,14 +33,31 @@ export const Block = ({
   return (
     <div className={blockClass} >
       {hasTitle && <div className="col-title">{title}</div>}
-      {hasImage && <div className="col-img">
-        <img src={source} />
-      </div>}
-      {hasMessage && <div className={colTextClass}>
-        {text}
-      </div>}
+      {hasImage &&
+        <div className="col-img">
+          <img alt="" src={source} />
+        </div>}
+      {hasMessage &&
+        <div className={colTextClass}>
+          {text}
+        </div>}
     </div>
   )
+}
+
+Block.defaultProps = {
+  bgTemplate: 'template1',
+  hasImage: false,
+  hasMessage: false,
+  hasTitle: false,
+  isCopywrite: false,
+  isImageWidthAuto: false,
+  isMenu: false,
+  isMonoblock: false,
+  isReverse: false,
+  source: null,
+  text: 'Default text',
+  title: 'Default title',
 }
 
 Block.propTypes = {

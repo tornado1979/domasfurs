@@ -32,7 +32,7 @@ export const socialData = {
 }
 
 export const footerData = {
-  list1:{
+  list1: {
     items: [
       '1st list',
       'list item 1',
@@ -44,7 +44,7 @@ export const footerData = {
     ],
     type: 'list',
   },
-  list2:{
+  list2: {
     items: [
       '2nd list',
       'list item 7',
@@ -56,7 +56,7 @@ export const footerData = {
     ],
     type: 'list',
   },
-  list3:{
+  list3: {
     items: [
       '3rd list',
       'list item 13',

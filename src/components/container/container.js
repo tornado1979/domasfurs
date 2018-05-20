@@ -19,7 +19,8 @@ export const Container = ({
   source,
   subTitle,
   text,
-  textType}) => {
+  textType,
+}) => {
   const panelClass = classnames({
     'panel--wrapper': !isSized,
     'panel--wrapper--sized': isSized,
@@ -28,17 +29,17 @@ export const Container = ({
   })
 
   // affects small blocks under then main image block
-  const img_width = imgWidth === 'fixed' ? '150px' : '100%'
+  const imageWith = imgWidth === 'fixed' ? '150px' : '100%'
 
   return (
     <div className="panel">
-      <div className= {panelClass} >
-        {hasImg && <img src={source} style={{maxWidth: img_width}}/>}
+      <div className={panelClass} >
+        {hasImg && <img alt="" src={source} style={{ maxWidth: imageWith }} />}
         {hasButton && <Button
-          border='#fff'
-          color='gold'
-          fontColor='#fff'
-          text='Ask Demo'
+          border="#fff"
+          color="gold"
+          fontColor="#fff"
+          text="Ask Demo"
         />}
         {hasMessage && <Message
           text={text}
@@ -54,11 +55,18 @@ export const Container = ({
 }
 
 Container.defaultProps = {
-  bgTemplate: 'bg1', // bg template e.g. -bg1, -bg2 etc
   hasBackground: false,
+  hasButton: false,
   hasImg: true,
+  hasMessage: false,
   hasSubTitle: false,
-  text: 'Add a message that you want to accompany the image',
+  imgWidth: 'responsive',
+  isSized: false,
+  link: null,
+  message: 'Default message',
+  source: null,
+  subTitle: 'Default subtitle',
+  textType: 'title',
 }
 
 Container.propTypes = {

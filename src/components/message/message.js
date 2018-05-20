@@ -4,8 +4,7 @@ import classnames from 'classnames'
 
 import './message.scss'
 
-export const Message = ({text, textType}) => {
-
+export const Message = ({ text, textType }) => {
   const messageClass = classnames({
     'message--comments': textType === 'comment', // when the text is TITLE
     'message--image': textType === 'title', // when the text is a comment
@@ -18,10 +17,6 @@ export const Message = ({text, textType}) => {
 
 Message.propTypes = {
   text: propTypes.string.isRequired,
-}
-
-Message.defaultProps = {
-  text: 'Add a message that you want to accompany the image',
 }
 
 Message.propTypes = {

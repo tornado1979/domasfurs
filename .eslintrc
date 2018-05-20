@@ -1,16 +1,28 @@
 {
   "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
   "plugins": [
     "react",
     "jsx-a11y"
   ],
   "rules": {
+    "jsx-a11y/label-has-for": [ 0, {
+      "components": [ "Label" ],
+      "required": {
+          "every": [ "nesting", "id" ]
+      },
+      "allowChildren": false
+    }],
     "eol-last": ["error", "always"],
     "no-var": "error",
     "quotes": ["error", "single"],
     "prefer-const": "error",
     "no-trailing-spaces": "error",
-    "max-len": ["error", { "code": 80 }],
+    "max-len": ["error", { "code": 100 }],
     "arrow-body-style": ["error", "always"],
     "comma-style": ["error", "last"],
     "comma-dangle": ["error", "always-multiline"],

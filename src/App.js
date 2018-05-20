@@ -1,25 +1,29 @@
-import React, {
-  Component,
-} from 'react'
+import React, { Fragment } from 'react'
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom'
 
 import './App.scss'
 import { Header } from './components/header/index'
-import Main from './components/main'
 import { Footer } from './components/footer'
+// import Main from './components/main'
 
-class App extends Component {
-  render() {
+import { Routes } from './components/routes'
 
-    return (
-      <div className="App">
-        <Header />
-        <Main />
-        <Footer
-          bgTemplate = 'template1' // background template
-        />
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <Router>
+        <Fragment>
+          <Header />
+          <Routes />
+          <Footer
+            bgTemplate="template1" // background template
+          />
+        </Fragment>
+      </Router>
+    </div>
+  )
 }
 
 export default App

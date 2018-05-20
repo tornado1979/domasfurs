@@ -5,7 +5,7 @@ import LightBox from 'react-images'
 import './gallery.scss'
 
 class Gallery extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
 
     this.state = { currentImage: 0 }
@@ -41,20 +41,23 @@ class Gallery extends Component {
     })
   }
 
-  render(){
+  render() {
     const images = this.props.photos.map(image => {
-      return <div key={image.id}>
-        <img alt={image.alt}
-          onClick={(event) => {this.openLightbox(event, image)}}
-          src={image.src}
-        />
-      </div>
+      return (
+        <div key={image.id}>
+          <img // eslint-disable-line
+            alt={image.alt}
+            onClick={(event) => { this.openLightbox(event, image) }}
+            src={image.src}
+          />
+        </div>)
     })
 
     return (
       <div className="gallery">
         {images}
-        <LightBox currentImage={this.state.currentImage}
+        <LightBox
+          currentImage={this.state.currentImage}
           images={this.props.photos}
           isOpen={this.state.lightboxIsOpen}
           onClickNext={this.gotoNext}
@@ -67,6 +70,6 @@ class Gallery extends Component {
 }
 
 Gallery.propTypes = {
-  photos: propTypes.array.isRequired,
+  photos: propTypes.array.isRequired, // eslint-disable-line
 }
 export default Gallery

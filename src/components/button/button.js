@@ -10,7 +10,10 @@ export const Button = (props) => {
       style={{
         backgroundColor: props.color,
         border: `1px solid ${props.border}`,
-        color: props.fontColor}}>{props.text}</button>
+        color: props.fontColor,
+      }}
+    >{props.text}
+    </button>
   )
 }
 
@@ -19,11 +22,4 @@ Button.propTypes = {
   color: propTypes.string.isRequired,
   fontColor: propTypes.string.isRequired,
   text: propTypes.string.isRequired,
-}
-
-Button.defaultProps = {
-  border: '#ffffff',
-  color: 'transparent',
-  fontColor: '#fff',
-  text: 'click me',
 }
