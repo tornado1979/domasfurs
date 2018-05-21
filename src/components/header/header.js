@@ -7,7 +7,9 @@ export const Header = () => {
   return (
     <header>
       <nav className="navBar">
-        <div className="logo" />
+        <NavLink className="logo" to="/">
+          <div className="logo" />
+        </NavLink>
         <input id="menu-toggle" type="checkbox" />
         <label className="label-toggle" htmlFor="menu-toggle" />
         <div className="menu" role="navigation">
@@ -25,6 +27,13 @@ export const Header = () => {
             }
             to="/aboutus"
           >About us
+          </NavLink>
+          <NavLink
+            activeStyle={
+              { color: '#959E05' }
+            }
+            to="/gallery"
+          >Gallery
           </NavLink>
           <NavLink
             activeStyle={

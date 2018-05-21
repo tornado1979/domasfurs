@@ -30,6 +30,7 @@ export const Block = ({
   const colTextClass = classnames({
     'col-text': true,
   })
+
   return (
     <div className={blockClass} >
       {hasTitle && <div className="col-title">{title}</div>}
