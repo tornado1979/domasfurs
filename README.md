@@ -33,6 +33,7 @@ app/
   src/  <!-- main project code -->
   components/
   data/ <!-- dummy data -->
+  pages/ <!-- main page, gallery page, aboutus page & contactus page -->
   App.js
   index.js
   .eslintrc <!-- eslint configuration with rules-->
