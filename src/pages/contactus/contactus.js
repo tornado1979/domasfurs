@@ -5,7 +5,7 @@ import '../main/main.scss'
 
 
 import contactus1 from '../../assets/img/contactus/contactus1.jpg'
-import contactus2 from '../../assets/img/aboutus/aboutus2.jpg'
+import contactus2 from '../../assets/img/contactus/contactus2.jpg'
 
 
 class ContactUs extends Component {
