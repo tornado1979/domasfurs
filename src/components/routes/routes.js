@@ -18,19 +18,22 @@ export const Routes = () => {
       <Route
         component={Main}
         exact
-        path="/"
+        path="/domasfurs"
       />
       <Route
         component={AboutUs}
-        path="/aboutus"
+        exact
+        path="/domasfurs/aboutus"
       />
       <Route
         component={Gallery}
-        path="/gallery"
+        exact
+        path="/domasfurs/gallery"
       />
       <Route
         component={ContactUs}
-        path="/contact"
+        exact
+        path="/domasfurs/contact"
       />
       <Route component={NoMatch} />
     </Switch>
