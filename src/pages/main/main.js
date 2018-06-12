@@ -9,7 +9,7 @@ import { clients as clientsData } from '../../data/clientsData'
 
 import './main.scss'
 
-import docaNew from '../../assets/img/doca-new.jpg'
+import main from '../../assets/img/main.png'
 import cat1 from '../../assets/img/cat1.jpg'
 import cat2 from '../../assets/img/cat2.jpg'
 import cat3 from '../../assets/img/cat3.jpg'
@@ -96,13 +96,13 @@ class Main extends Component {
           bgTemplate="bg1"
           hasButton={false} // container has button
           hasImg // cotainer has <img>
-          hasMessage // container has message
+          hasMessage={false} // container has message
           hasSubTitle={false} // constiner has sub-title
           imgWidth="responsive" // image on container is responsive or fixed
           isSized={false} // true on 'horizontalBlock'
           link="" // button link
-          source={docaNew} // image source doca-new.jpg
-          text="Doca new products collection"
+          source={main} // image source doca-new.jpg
+          text=""
           textType="title" // text type is 'title' or 'comment'
           type="image"
         />
