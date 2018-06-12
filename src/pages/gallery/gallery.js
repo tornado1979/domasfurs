@@ -56,7 +56,7 @@ class Pictures extends Component {
             hasTitle={false}
             isMonoblock
             isReverse={false} // '1.image & 2.text' or '1.text & 2.image'
-            source={photos[9].src}
+            source={photos[0].src}
             text={this.galleryText()}
             title="THE title"
           />
