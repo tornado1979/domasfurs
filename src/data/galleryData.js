@@ -53,7 +53,19 @@ import img52 from '../assets/gallery/img52.jpg'
 import img53 from '../assets/gallery/img53.jpg'
 import img54 from '../assets/gallery/img54.jpg'
 import img55 from '../assets/gallery/img55.jpg'
-
+import img56 from '../assets/gallery/img56.jpg'
+import img57 from '../assets/gallery/img57.jpg'
+import img58 from '../assets/gallery/img58.jpg'
+import img59 from '../assets/gallery/img59.jpg'
+import img60 from '../assets/gallery/img60.jpg'
+import img61 from '../assets/gallery/img61.jpg'
+import img62 from '../assets/gallery/img62.jpg'
+import img63 from '../assets/gallery/img63.jpg'
+import img64 from '../assets/gallery/img64.jpg'
+import img65 from '../assets/gallery/img65.jpg'
+import img66 from '../assets/gallery/img66.jpg'
+import img67 from '../assets/gallery/img67.jpg'
+import img68 from '../assets/gallery/img68.jpg'
 
 export const photos = [
   {
@@ -223,108 +235,172 @@ export const photos = [
   },
   {
     alt: 'Lorem Ipsum',
-    id: 34,
+    id: 33,
     src: img35,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 35,
+    id: 34,
     src: img36,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 36,
+    id: 35,
     src: img37,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 37,
+    id: 36,
     src: img38,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 38,
+    id: 37,
     src: img39,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 39,
+    id: 38,
     src: img40,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 40,
+    id: 39,
     src: img41,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 41,
+    id: 40,
     src: img42,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 42,
+    id: 41,
     src: img43,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 43,
+    id: 42,
     src: img44,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 44,
+    id: 43,
     src: img45,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 45,
+    id: 44,
     src: img46,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 46,
+    id: 45,
     src: img47,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 47,
+    id: 46,
     src: img48,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 48,
+    id: 47,
     src: img49,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 49,
+    id: 48,
     src: img50,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 50,
+    id: 49,
     src: img51,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 51,
+    id: 50,
     src: img52,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 52,
+    id: 51,
     src: img53,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 53,
+    id: 52,
     src: img54,
   },
   {
     alt: 'Lorem Ipsum',
-    id: 54,
+    id: 53,
     src: img55,
   },
-
+  {
+    alt: 'Lorem Ipsum',
+    id: 54,
+    src: img56,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 55,
+    src: img57,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 56,
+    src: img58,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 57,
+    src: img59,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 58,
+    src: img60,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 59,
+    src: img61,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 60,
+    src: img62,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 61,
+    src: img63,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 62,
+    src: img64,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 63,
+    src: img65,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 64,
+    src: img66,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 65,
+    src: img67,
+  },
+  {
+    alt: 'Lorem Ipsum',
+    id: 66,
+    src: img68,
+  },
 ]
